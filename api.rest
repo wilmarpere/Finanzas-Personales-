@@ -3,16 +3,18 @@ POST http://localhost:8000/usuario
 Content-Type: application/json
 
 {
-"nombre":"Brayam",
-"email":"sisa@gmail.com",
-"contraseña":"456"
+"nombre":"Wilmar",
+"email":"rrrr@gmail.com",
+"contraseña":"222"
 }
+###
+
 
 POST http://localhost:8000/
 Content-Type: application/json
 
 {
     "email":"per@gmail.com",
-    "password":"123"
+    "contraseña":"456"
 }
 
