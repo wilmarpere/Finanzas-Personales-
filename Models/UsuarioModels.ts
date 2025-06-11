@@ -27,7 +27,7 @@ public async RegistrarUsuario(): Promise<{success:boolean;message:string; usuari
         }
         const {nombre, email,contraseña}= this._objUsuario;
         if (!nombre|| !email|| !contraseña) {
-            throw new Error("Faltan campos requeridos para registrar la peticion ")
+            throw new Error("Faltan campos requeridos para registrar l apeticion ")
         }
 
         await conexion.execute("START TRANSACTION");
