@@ -3,20 +3,16 @@ POST http://localhost:8000/usuario
 Content-Type: application/json
 
 {
-
-
-###
-
+"nombre":"Brayam",
+"email":"sisa@gmail.com",
+"contraseña":"456"
+}
 
 POST http://localhost:8000/
 Content-Type: application/json
 
 {
     "email":"per@gmail.com",
-    "contraseña":"456"
+    "password":"123"
 }
 
-###
-GET http://localhost:8000/usuario
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiNzQ2ZjlmMTAtNTNkOC00ZmFiLTkxN2UtYjgyNDE4YmFjNWI1IiwiZXhwIjoxNzQ5NjU4OTY3fQ.1LJHy25-l2qgbRlIj0KeQ6lSGMn04gu4CWj1_YkxLfE
