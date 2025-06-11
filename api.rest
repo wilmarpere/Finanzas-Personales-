@@ -3,9 +3,9 @@ POST http://localhost:8000/usuarioss
 Content-Type: application/json
 
 {
-"nombre":"trwewe",
-"email":"sisa@gmail.com",
-"contraseña":"3123"
+    "nombre": "julis",
+    "email": "777@gmail",
+    "contraseña": "1234"
 }
 
 
