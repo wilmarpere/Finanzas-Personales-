@@ -16,4 +16,4 @@ routes.forEach((route)=>{
 })
 
 console.log(" Servidor corriendo por el puerto 8000");
-await app.listen({port: 8000});
+await app.listen({port: 8000})
