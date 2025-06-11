@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
 import { route } from "https://deno.land/x/oak@v17.1.3/middleware/serve.ts";
-import { Application,oakCors } from "./Dependencias/dependencias.ts";
+import { Application,oakCors } from "./Dependencies/dependencias.ts";
 import{UsuarioRutes} from "./Routes/usuarioRoutes.ts"
 import console from "node:console";
 
