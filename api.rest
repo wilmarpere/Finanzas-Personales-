@@ -1,13 +1,14 @@
 
-POST http://localhost:8000/usuario
+POST http://localhost:8000/usuarioss
 Content-Type: application/json
 
 {
-"nombre":"Brayam",
+"nombre":"trwewe",
 "email":"sisa@gmail.com",
-"contraseña":"456"
+"contraseña":"3123"
 }
 
+###
 POST http://localhost:8000/
 Content-Type: application/json
 

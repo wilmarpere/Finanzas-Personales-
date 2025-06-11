@@ -4,6 +4,6 @@ import{postUsuario} from "../Controller/UsuarioController.ts"
 
 const UsuarioRutes = new Router();
 
-UsuarioRutes.post("/usuario",postUsuario);
+UsuarioRutes.post("/usuarioss",postUsuario);
 
 export{UsuarioRutes}
