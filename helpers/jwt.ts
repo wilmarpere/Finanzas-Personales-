@@ -24,7 +24,7 @@ export const CrearToken = async(userId:string)=>{
 }
 
 
-export const VerificarTokenAccesso = async (token:string)=>{
+export const VerificarTokenAcceso = async (token:string)=>{
     const secretKey = await generarKey(key);
     try {
         return await verify(token,secretKey);
