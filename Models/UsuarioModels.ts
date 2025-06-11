@@ -1,7 +1,7 @@
 // deno-lint-ignore-file
 import { conexion } from "../Models/conexion.ts";
 import { number } from 'https://deno.land/x/zod@v3.24.1/types.ts';
-import{z} from "../Dependencias/dependencias.ts"
+import{z} from "../Dependencies/dependencias.ts"
 
 interface UsuarioData{
     id_usuario:number| null;

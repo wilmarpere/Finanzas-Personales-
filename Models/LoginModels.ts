@@ -5,7 +5,7 @@ import { ZodError } from "https://deno.land/x/zod@v3.24.1/ZodError.ts";
 
 export const iniciarSesion = async (email:string,contraseña:string)=>{
     try {
-        const[usuario] = await conexion.query("SELECT * FROM usuarios WHERE email=?",[email]);
+        const[usuario] = await conexion.query("SELECT * FROM Usuarios WHERE email=?",[email]);
         if (contraseña === usuario.contraseña) {
             return{
                 success:true,

@@ -2,7 +2,7 @@
 import { CrearToken,VerificarTokenAcceso } from "../helpers/jwt.ts";
 import { iniciarSesion } from "../Models/LoginModels.ts";
 
-export const posUserLigin = async (ctx: any)=> {
+export const posUserLogin = async (ctx: any)=> {
 
     const {request,response} = ctx;
 
