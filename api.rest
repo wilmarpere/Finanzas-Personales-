@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "nombre": "julis",
-    "email": "esn@gmail",
+    "email": "lilil@gmail",
     "contraseña": "1234"
 }
 
@@ -22,10 +22,6 @@ Content-Type: application/json
 }
 
 ###
-
-
-
-###
 POST http://localhost:8000/
 Content-Type: application/json
 
@@ -33,15 +29,9 @@ Content-Type: application/json
     "email":"per@gmail.com",
     "contraseña":"456"
 }
-
+###
+GET http://localhost:8000/cuentas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MywianRpIjoiNDdmOWI1NjItMWJjNi00OTIyLTllYTctZTExZmQxOTFjNzZkIiwiZXhwIjoxNzQ5NzQ3NzAwfQ.jbRQSiBSNPJXVDpKq0crHkJ2nlyqc2j8ZkT4l2GJgd8
 ###
 GET http://localhost:8000/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiYzkzNGFiNDktM2ZiMC00ZWZjLWI2ZDUtOTkxM2NiODYzNDQ4IiwiZXhwIjoxNzQ5NzQ3NTk0fQ.hjJxZq20F3pCP_hFudpxLdLOXg3lEijrpP-vcGxZAPE
-
-###
-
-GET http://localhost:8000/categoria
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiMDU2ZTQyM2YtY2JmNS00ZjljLTg5YmYtNjBlZDE2N2E1ZjU2IiwiZXhwIjoxNzQ5NzQ0Nzg4fQ.cYo2cLZG50qpPonW-ZWuGb4H2CFiqagO8r-AYcSJ4Jc
-
-###

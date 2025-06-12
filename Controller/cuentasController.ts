@@ -1,8 +1,24 @@
 // deno-lint-ignore-file
+
 import { Cuentas } from "../Models/cuentasModels.ts";
 
+import { Cuentas, obtenerCuentasPorUsuario } from "../Models/cuentasModels.ts";
+import { request } from 'node:http';
 
-export const getCuentas = async(ctx : any)=>{
+
+
+export const getCuentasUsuario = async(ctx : any)=>{
+    const {response,state}= ctx;
+    const id_usuario = state.user.sub;// El sub del JWT  es el id_usuario
+
+    const result = await obtenerCuentasPorUsuario(id_usuario);
+    if (result.success) {
+        response.status= 200;
+        response.body = {success: true,Cuentas: result.data}
+    }else{
+        response.status = 500;
+        response.body = {success:false,msg:result.msg}
+    }
     
 }
 
