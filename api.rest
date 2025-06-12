@@ -35,4 +35,3 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwM
 ###
 GET http://localhost:8000/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiMzY2NzdkZjgtZTYwZC00YTAxLThlOWUtNDZiNzhhNjY4MWRmIiwiZXhwIjoxNzQ5NzM2NzM5fQ.9-QHzqlo5yATccTpSVw-fBee-bA-QpFtrQfoFtsnGSw
