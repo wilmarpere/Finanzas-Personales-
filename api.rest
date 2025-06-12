@@ -3,9 +3,9 @@ POST http://localhost:8000/usuarioss
 Content-Type: application/json
 
 {
-"nombre":"trwewe",
-"email":"sisa@gmail.com",
-"contraseña":"3123"
+    "nombre": "julis",
+    "email": "esn@gmail",
+    "contraseña": "1234"
 }
 
 
@@ -31,6 +31,12 @@ Content-Type: application/json
 
 {
     "email":"per@gmail.com",
-    "password":"123"
+    "contraseña":"456"
 }
 
+###
+GET http://localhost:8000/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiOTYxOWU3NzktNTYzYi00YjE5LTkwMDctNDIzZDM4ODZiMjAzIiwiZXhwIjoxNzQ5NzI5NDU3fQ.JWss0ZZhQSMHblrrqb43yO50pJn-pis_3karitJgjU0
+
+###
