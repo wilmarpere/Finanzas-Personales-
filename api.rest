@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "nombre": "julis",
-    "email": "esn@gmail",
+    "email": "lilil@gmail",
     "contraseña": "1234"
 }
 
@@ -30,13 +30,17 @@ POST http://localhost:8000/
 Content-Type: application/json
 
 {
-    "email":"per@gmail.com",
-    "contraseña":"456"
+    "email":"dayana@gmail.com",
+    "contraseña":"1234"
 }
 
 ###
 GET http://localhost:8000/users
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiOTYxOWU3NzktNTYzYi00YjE5LTkwMDctNDIzZDM4ODZiMjAzIiwiZXhwIjoxNzQ5NzI5NDU3fQ.JWss0ZZhQSMHblrrqb43yO50pJn-pis_3karitJgjU0
+
+###
+
+GET  http://localhost:8000/transaccion
 
 ###
