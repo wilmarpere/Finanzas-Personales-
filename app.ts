@@ -2,13 +2,13 @@
 import { route } from "https://deno.land/x/oak@v17.1.3/middleware/serve.ts";
 import { Application,oakCors } from "./Dependencies/dependencias.ts";
 import{UsuarioRutes} from "./Routes/usuarioRoutes.ts"
-import console from "node:console";
 import { LoginRouter } from "./Routes/LoginRoutes.ts";
+import { CuentasRoutes } from "./Routes/cuentasRoutes.ts";
 
 const app = new Application();
 app.use (oakCors());
 
-const routes =[UsuarioRutes,LoginRouter]
+const routes =[UsuarioRutes,LoginRouter,CuentasRoutes]
 
 routes.forEach((route)=>{
     app.use(route.routes());

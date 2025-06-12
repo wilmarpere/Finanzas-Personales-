@@ -7,6 +7,19 @@ Content-Type: application/json
 "email":"s@gmail.com",
 "contraseña":"456"
 }
+
+
+###
+POST http://localhost:8000/cuentas
+Content-Type: application/json
+
+{
+    "id_usuario":"1",
+    "nombre":"Cuenta de Ahorros",
+    "tipo":"Tarjeta",
+    "saldo":25000
+}
+
 ###
 
 
