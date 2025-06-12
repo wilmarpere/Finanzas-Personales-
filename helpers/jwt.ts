@@ -3,7 +3,6 @@ import 'https://deno.land/std@0.224.0/dotenv/load.ts';
 import { create,getNumericDate,verify } from '../Dependencies/dependencias.ts';
 import { generarKey } from "./CriptoKey.ts";
 import { serve } from "https://deno.land/x/oak@v17.1.3/middleware/serve.ts";
-import { Console, error } from 'node:console';
 
 const key = Deno.env.get("MY_SECRET_KEY") || "default_key";
 const server = Deno.env.get("SERVER");

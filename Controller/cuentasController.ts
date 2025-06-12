@@ -1,6 +1,5 @@
 // deno-lint-ignore-file
 import { Cuentas } from "../Models/cuentasModels.ts";
-import { request } from 'node:http';
 
 
 export const getCuentas = async(ctx : any)=>{
