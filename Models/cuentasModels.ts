@@ -64,40 +64,71 @@ export class Cuentas {
     }
 
     public async listarCuentasPorUsuario(id_usuario: number): Promise<CuentasData[]> {
-    const result = await conexion.query(
-        "SELECT id_cuenta, id_usuario, nombre, tipo, saldo FROM Cuentas WHERE id_usuario = ?",
-        [id_usuario]
-    );
-    if (Array.isArray(result[0])) {
-        return result.map((row: any[]) => ({
-            id_cuenta: row[0],
-            id_usuario: row[1],
-            nombre: row[2],
-            tipo: row[3],
-            saldo: row[4],
-            fecha_creacion: undefined
-        })) as CuentasData[];
+        try {
+            console.log(`Buscando cuentas para usuario ID: ${id_usuario}`);
+            
+            const result = await conexion.query(
+                "SELECT id_cuenta, id_usuario, nombre, tipo, saldo FROM Cuentas WHERE id_usuario = ?",
+                [id_usuario]
+            );
+            
+            console.log("Resultado de la consulta:", result);
+            
+            // Verificar si result es un array y si tiene datos
+            if (!Array.isArray(result)) {
+                console.log("El resultado no es un array:", typeof result);
+                return [];
+            }
+            
+            if (result.length === 0) {
+                console.log("No se encontraron cuentas para este usuario");
+                return [];
+            }
+
+            // Si el primer elemento es un array (formato [valor1, valor2, ...])
+            if (Array.isArray(result[0])) {
+                return result.map((row: any[]) => ({
+                    id_cuenta: row[0],
+                    id_usuario: row[1],
+                    nombre: row[2],
+                    tipo: row[3],
+                    saldo: row[4],
+                    fecha_creacion: undefined // No existe en la DB
+                })) as CuentasData[];
+            }
+            
+            // Si el primer elemento es un objeto (formato {columna: valor, ...})
+            if (typeof result[0] === 'object' && result[0] !== null) {
+                return result.map((row: any) => ({
+                    id_cuenta: row.id_cuenta || row.ID_CUENTA,
+                    id_usuario: row.id_usuario || row.ID_USUARIO,
+                    nombre: row.nombre || row.NOMBRE,
+                    tipo: row.tipo || row.TIPO,
+                    saldo: row.saldo || row.SALDO,
+                    fecha_creacion: undefined // No existe en la DB
+                })) as CuentasData[];
+            }
+            
+            console.log("Formato de resultado no reconocido");
+            return [];
+            
+        } catch (error) {
+            console.error("Error en listarCuentasPorUsuario:", error);
+            throw error;
+        }
     }
-    if (typeof result[0] === 'object' && result[0] !== null) {
-        return result.map((row: any) => ({
-            id_cuenta: row.id_cuenta || row.ID_CUENTA,
-            id_usuario: row.id_usuario || row.ID_USUARIO,
-            nombre: row.nombre || row.NOMBRE,
-            tipo: row.tipo || row.TIPO,
-            saldo: row.saldo || row.SALDO,
-            fecha_creacion: undefined
-        })) as CuentasData[];
-    }
-    return [];
 }
 
-}
+// Función para usar en el controlador
 export async function obtenerCuentasPorUsuario(id_usuario: number) {
     const cuentas = new Cuentas();
     try {
+        console.log(`Obteniendo cuentas para usuario: ${id_usuario}`);
         const lista = await cuentas.listarCuentasPorUsuario(id_usuario);
+        console.log(`Cuentas encontradas: ${lista.length}`);
         return { success: true, data: lista };
     } catch (error) {
+        console.error("Error en obtenerCuentasPorUsuario:", error);
         return { success: false, msg: "Error al obtener cuentas" };
     }
 }

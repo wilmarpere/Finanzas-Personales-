@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "nombre": "julis",
-    "email": "esn@gmail",
+    "email": "lilil@gmail",
     "contraseña": "1234"
 }
 
@@ -26,12 +26,12 @@ POST http://localhost:8000/
 Content-Type: application/json
 
 {
-    "email":"perez@gmail.com",
-    "contraseña":"123"
+    "email":"per@gmail.com",
+    "contraseña":"456"
 }
 ###
 GET http://localhost:8000/cuentas
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MSwianRpIjoiNTY1MDRiZDctOTMxNy00ZTNmLThjN2QtYTNjZDI5NmY2MmFiIiwiZXhwIjoxNzQ5NzQ1NTE2fQ.68A6QtAoFEkP7hIPKN1XtbktUfAS4YMuawChLHXk6xM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwOjgwMDAvU0VSVkVSX0pXVCIsInN1YiI6MywianRpIjoiNDdmOWI1NjItMWJjNi00OTIyLTllYTctZTExZmQxOTFjNzZkIiwiZXhwIjoxNzQ5NzQ3NzAwfQ.jbRQSiBSNPJXVDpKq0crHkJ2nlyqc2j8ZkT4l2GJgd8
 ###
 GET http://localhost:8000/users
 Content-Type: application/json
