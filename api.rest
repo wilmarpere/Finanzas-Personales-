@@ -1,12 +1,13 @@
 
-POST http://localhost:8000/usuario
+POST http://localhost:8000/usuarioss
 Content-Type: application/json
 
 {
-"nombre":"s",
-"email":"s@gmail.com",
-"contraseña":"456"
+"nombre":"trwewe",
+"email":"sisa@gmail.com",
+"contraseña":"3123"
 }
+
 
 
 ###
@@ -23,11 +24,13 @@ Content-Type: application/json
 ###
 
 
+
+###
 POST http://localhost:8000/
 Content-Type: application/json
 
 {
     "email":"per@gmail.com",
-    "contraseña":"456"
+    "password":"123"
 }
 
