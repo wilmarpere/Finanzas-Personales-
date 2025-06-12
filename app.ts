@@ -5,11 +5,12 @@ import{UsuarioRutes} from "./Routes/usuarioRoutes.ts"
 import { LoginRouter } from "./Routes/LoginRoutes.ts";
 import { CuentasRoutes } from "./Routes/cuentasRoutes.ts";
 import { UserRouter } from "./Routes/userRou.ts";
+import { CategoriaRouter } from "./Routes/CategoriasRoutes.ts";
 
 const app = new Application();
 app.use (oakCors());
 
-const routes =[UsuarioRutes,LoginRouter,CuentasRoutes,UserRouter]
+const routes =[UsuarioRutes,LoginRouter,CuentasRoutes,UserRouter,CategoriaRouter]
 
 routes.forEach((route)=>{
     app.use(route.routes());
