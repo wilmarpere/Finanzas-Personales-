@@ -1,7 +1,7 @@
 
 // deno-lint-ignore-file
 import { Usuario } from "../Models/UsuarioModels.ts";
-import { request } from 'node:http';
+
 
 export const  postUsuario = async(ctx:any)=>{
     const{response,request}= ctx;
